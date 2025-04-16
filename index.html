@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>המאפייה המסתורית</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; background: #fff8f0; color: #4b2e2e; text-align: center; direction: rtl; padding: 2rem; }
+    .station { display: none; margin-top: 2rem; }
+    .active { display: block; }
+    button { padding: 1rem 2rem; background: #8b5e3c; color: white; border: none; border-radius: 10px; font-size: 1.2rem; margin-top: 2rem; cursor: pointer; }
+    .btn-hint, .btn-solution { margin-top: 1rem; display: block; }
+    .puzzle { margin: 2rem 0; }
+  </style>
+</head>
+<body>
+  <h1>המאפייה המסתורית</h1>
+  <div id="story" class="active">
+    <p>אתם צועדים אל תוך סמטה צרה באמסטרדם, שם מסתתרת מאפייה ישנה. לפתע, אתם מגלים יומן סודי עם תשע משימות. האם תצליחו לחשוף את המתכון המלא לעוגיות האמסטרדם המפורסמות?</p>
+    <button onclick="goToStation(1)">התחילו את המשימה</button>
+  </div>
+
+  <!-- תחנות -->
+  <div id="station1" class="station">
+    <h2>תחנה 1: שולחן השף (חמאה)</h2>
+    <p>השלימו את הפאזל החזותי של קוביות חמאה</p>
+    <!-- כאן תהיה אינטראקציה של פאזל -->
+    <button onclick="nextStation(2)">כל הכבוד! לתחנה הבאה</button>
+  </div>
+
+  <div id="station2" class="station">
+    <h2>תחנה 2: ארון התבלינים (תמצית וניל)</h2>
+    <p>משחק זיכרון: התאימו זוגות של תמציות וניל</p>
+    <!-- כאן משחק זיכרון -->
+    <button onclick="nextStation(3)">כל הכבוד! לתחנה הבאה</button>
+  </div>
+
+  <div id="station3" class="station">
+    <h2>תחנה 3: מגירת הסוכר</h2>
+    <p>יש לכם שלושה קנקנים: 300 גרם, 500 גרם ו-800 גרם. איך תשקלו בדיוק 500 גרם סוכר?</p>
+    <!-- כאן סימולציה של קנקנים או פתרון מילולי -->
+    <button onclick="nextStation(4)">כל הכבוד! לתחנה הבאה</button>
+  </div>
+
+  <div id="station4" class="station">
+    <h2>תחנה 4: מעבדת הטעמים (מלח)</h2>
+    <p>ענו על 5 שאלות טריוויה על מלח</p>
+    <!-- כאן חידון -->
+    <button onclick="nextStation(5)">כל הכבוד! לתחנה הבאה</button>
+  </div>
+
+  <div id="station5" class="station">
+    <h2>תחנה 5: טחנת הקמח</h2>
+    <p>פתרו תשבץ אפייה. האותיות המסומנות יגלו את כמות הקמח</p>
+    <!-- כאן תשבץ -->
+    <button onclick="nextStation(6)">כל הכבוד! לתחנה הבאה</button>
+  </div>
+
+  <div id="station6" class="station">
+    <h2>תחנה 6: חדר הקקאו</h2>
+    <p>מיתוס או מתכון? בחרו את המשפטים הנכונים</p>
+    <!-- כאן משימת בחירה מרובה -->
+    <button onclick="nextStation(7)">כל הכבוד! לתחנה הבאה</button>
+  </div>
+
+  <div id="station7" class="station">
+    <h2>תחנה 7: מעבדת הכימיה (סודה לשתייה)</h2>
+    <p>פתרו את כתב הסתרים וגלו את כמות הסודה לשתייה</p>
+    <!-- כאן כתב סתרים -->
+    <button onclick="nextStation(8)">כל הכבוד! לתחנה הבאה</button>
+  </div>
+
+  <div id="station8" class="station">
+    <h2>תחנה 8: מגירת האגוזים</h2>
+    <p>מצאו את ההבדלים בין שתי תמונות</p>
+    <!-- כאן תמונות עם הבדלים -->
+    <button onclick="nextStation(9)">כל הכבוד! לתחנה הבאה</button>
+  </div>
+
+  <div id="station9" class="station">
+    <h2>תחנה 9: המגירה הנעולה</h2>
+    <p>פצחו קוד סודי שמורכב מחלקי המרשם שגיליתם עד כה</p>
+    <!-- כאן משימת סיכום -->
+    <button onclick="endGame()">סיימתם! לצפייה במתכון</button>
+  </div>
+
+  <div id="ending" class="station">
+    <h2>כל הכבוד!</h2>
+    <p>פיענחתם את כל התחנות. הנה מתכון העוגיות המסתורי!</p>
+    <p><strong>עוגיות אמסטרדם:</strong> ...</p>
+  </div>
+
+  <script>
+    function goToStation(num) {
+      document.getElementById("story").classList.remove("active");
+      document.getElementById("station" + num).classList.add("active");
+    }
+    function nextStation(num) {
+      const prev = document.querySelector('.station.active');
+      prev.classList.remove('active');
+      document.getElementById("station" + num).classList.add("active");
+    }
+    function endGame() {
+      const prev = document.querySelector('.station.active');
+      prev.classList.remove('active');
+      document.getElementById("ending").classList.add("active");
+    }
+  </script>
+</body>
+</html>
