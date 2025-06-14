@@ -1,0 +1,164 @@
+<!-- כאן מתחיל הקוד -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>היער הקסום – רותם עדיני</title>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Assistant', sans-serif;
+      background: linear-gradient(-45deg, #8e44ad, #9b59b6, #af7ac5, #c39bd3, #d7bde2, #e8daef);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: #2c2c2c;
+      line-height: 1.7;
+      overflow-x: hidden;
+      position: relative;
+      margin: 0;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero-title {
+      font-family: 'Rubik', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(45deg, #8e44ad, #d7bde2);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textGradient 4s ease infinite;
+      margin-bottom: 1rem;
+    }
+
+    @keyframes textGradient {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #8e44ad, #9b59b6);
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      margin: 2rem auto;
+      cursor: pointer;
+      max-width: 400px;
+      box-shadow: 0 10px 30px rgba(142, 68, 173, 0.4);
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 2rem auto;
+      max-width: 1000px;
+      border-radius: 30px;
+      padding: 3rem 2rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-family: 'Rubik', sans-serif;
+      font-size: 2rem;
+      text-align: center;
+      color: #4a148c;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    footer a {
+      color: #ecf0f1;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero-section">
+    <div>
+      <h1 class="hero-title">🌟 היער הקסום</h1>
+      <p style="color: white; font-size: 1.2rem;">המשחק שיכניס קסם חדש לזוגיות שלכם – דרך שיחה, צחוק, מגע ותשוקה</p>
+      <a class="cta-button" href="#form">💜 כן! אנחנו רוצים להתחיל עכשיו</a>
+    </div>
+  </div>
+
+  <section id="form">
+    <h2>רוצים לקבל את המשחק ישירות למייל?</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 2rem;">מלאו שם ומייל בטופס ונשלח לכם את <strong>היער הקסום</strong> מיידית 📨</p>
+
+    <div class="fc-form form_340156 type-float rtl" data-form-id="340156-c94d65a9-3782-bfea-dc45-fcade556568b-45192" data-load-action="onload" data-load-animation="md-effect-0" data-pos-y="middle" data-pos-x="center" data-load-time="1500">
+      <div id="containingDiv7eaada0" class="fc_container type-float field-inside" data-action="https://panel.sendmsg.co.il/AddUserFromSite.aspx" data-method="post" data-target="_blank" data-lang="heb" data-height="496" style="max-width: initial;" data-width="396" data-max-width="100%">
+        <div class="fc_header cke_display_version_check"><p><strong>אז לאן לשלוח לך את המשחק?</strong></p></div>
+        <div align="center" cellspacing="0" class="fc_base table fc-div-struct">
+          <div class="tbody" style="">
+            <div class="tr fc-row-field">
+              <div class="td fc-cell-text"><span class="fc-text">&nbsp;מייל:*</span></div>
+              <div class="td fc-cell-field"><input type="email" id="email" name="eMail" class="fc_input_text" data-fc-id="email" data-fc-must-fill="true" placeholder="&nbsp;מייל:*"></div>
+            </div>
+            <div class="tr fc-row fc-row-field">
+              <div class="td fc-cell fc-cell-text"><span class="fc-text">שם</span><span class="fc-must-star">*</span></div>
+              <div class="td fc-cell fc-cell-field"><input maxlength="250" type="text" id="1" name="1" data-fc-type="text" class="fc_input_text" data-fc-id="1" data-fc-must-fill="true" placeholder="שם*"></div>
+            </div>
+            <div class="tr fc-button-row fc-hidden-row fc-colspan">
+              <div colspan="2" style="padding-top:7px;text-align:center;" class="td fc-cell-text">
+                <input value="רותם תשלחי לי את המשחק!" class="MustField fc_button" type="button" onclick="return submitForm(this);">
+                <input type="hidden" class="MustField" name="form" value="340156__eb0ff2e2-8357-45b2-8820-56e595b38d54" data-fc-id="form">
+              </div>
+            </div>
+            <div class="tr fc-row fc-row-field fc-checkbox-row fc-confirm-row fc-colspan">
+              <div class="td fc-cell fc-cell-field fc-cell-text" colspan="2">
+                <label onclick="">
+                  <input type="checkbox" class="fc_confirm" id="confirm" name="confirm" data-fc-id="confirm" data-fc-type="confirm" value="1">
+                  <span class="fc-text fc_confirm_text"><p>אני מאשר/ת לקבל דיוור/ים</p></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/opensanshebrew.css">
+      </div>
+      <link href="https://app.creaditor.com/formCreator/assets/fc-basics.min.css" rel="stylesheet">
+      <script type="text/javascript" src="https://app.creaditor.com/formCreator/assets/fc-basics.min.js"></script>
+      <link data-id="340156" href="https://panel.sendmsg.co.il/userfiles/site45192/FormCreate/fc_340156.css" rel="stylesheet">
+    </div>
+  </section>
+
+  <footer>
+    <p style="font-size: 1.1rem; margin-bottom: 1rem;">© רותם עדיני | כל הזכויות שמורות</p>
+    <p>
+      <a href="#">דף הבית</a> | 
+      <a href="#">משחקים נוספים</a> | 
+      <a href="#">מתכונים לאהבה</a> | 
+      <a href="#">קצת עליי</a> | 
+      <a href="#">צור קשר</a>
+    </p>
+  </footer>
+</body>
+</html>
